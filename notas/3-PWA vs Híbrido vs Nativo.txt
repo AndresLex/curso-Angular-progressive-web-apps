@@ -1,0 +1,28 @@
+PWA vs Hibrido vs Nativo
+
+Hibrido
+tiene un webview donde se compila nuestra aplicacion (con html, css, js) y se empaqueta como una aplicacion nativa. La cual podemos lanzar al store.
+
+Ejemplos:
+
+Cordova
+Capacitor
+Bridge
+utilizan typescript, javascript para la logica
+pero la UI lo hacen en otros tipos de lenguajes
+para que la UI sea nativa del dispositivo.
+
+Ejemplos:
+
+React Native
+NativeScript
+Nativo
+aplicacion en iOS, aplicacion en Android
+
+Decidir.
+La decision depende de nuestras necesidades especificas
+Para aplicaciones solo de contenido podemos optar por una PWA
+
+En sintesis.
+PWA para atraer usuarios. Si la aplicacion es meramente de contenidos
+Native para brindar una mejor experiencia a usuarios frecuentes, o se necesite utilizar funciones especificas nativas del hardware que no esten disponibles en las API de los sistemas bridge o hibrido

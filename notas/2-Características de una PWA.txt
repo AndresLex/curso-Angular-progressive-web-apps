@@ -1,0 +1,18 @@
+**Caracteristicas de una PWA **
+Luce como una aplicacion nativa
+
+Trabaja sin conexion y en redes lentas
+Carga en segundos
+Notificaciones Push
+Basada en Web
+Detectable (deep links), con un link podemos ir a la aplicacion PWA
+Pequeña en tamaño
+Siempre actualizada
+Icono en la pantalla de inicio
+Gracias a las PWA
+
+Twitter logro 65% de incremento en sesiones
+75% de incremento en tweets enviados
+
+Pinterest logro 60% de incremento en interaccion
+44% de incremento en ingresos por ads

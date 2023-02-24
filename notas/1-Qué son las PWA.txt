@@ -6,7 +6,7 @@ habilitan caracteristicas modernas a nuestras aplicaciones
 Algunas metricas
 55% de usuarios abandona un sitio si este no carga en 3 segundos
 La mayoria de sitios tarad 19 segundos en cargar
-Sitios que cargan dentro de los 5segundos aumentan su objetivo
+Sitios que cargan dentro de los 5 segundos aumentan su objetivo
 
 Apps vs Mobile Web
 La mayoria de nuestros usuarios consumen el contenido en mobile

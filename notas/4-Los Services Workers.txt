@@ -1,0 +1,10 @@
+Los Services Workers
+
+Un service worker es una secuencia de comandos que corren en segundo plano en el navegador.
+Ejemplo: Push notification, guardar información en cache, deep links, etc.
+
+la magia es preguntar a cache y luego preguntar a red por si existe contenido más actualizado.
+
+Un service worker es una secuencia de comandos que tu navegador ejecuta en segundo plano, 
+separado de una página web, abriéndoles la puerta a funciones que no necesitan una página 
+web ni interacción de usuario.
