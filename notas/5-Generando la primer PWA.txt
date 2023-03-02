@@ -1,0 +1,39 @@
+Generando la primer PWA
+
+comando para ejecutar pwa
+    > ng add @angular/pwa
+
+
+Si cierran la cuenta en firebase y luego con el comando firebase login sale este error “Cannot run login in non-interactive mode. See login:ci to generate a token for use in non-interactive environments.”, Actualicen firebase con
+
+    > npm install -g firebase-tools
+Si antes estaba logueado en firebase se sale con el codigo:
+
+    > firebase logout  
+
+y luego para ingresar a firebase usan el código
+
+    > firebase login // --interactive, Y: para aceptar permisos 
+
+Para inicializar el proyecto se usa el comando:
+
+    > firebase init
+
+Firebase es una suit grande de diferentes servicios como: bases de datos, Functions, Hosting, Storage
+Para el ejemplo se usara Hosting, con barra espaciadora se selecciona 
+Enseguida se configura 
+Firebase pregunta si se quiere usar un proyecto existente o crear uno nuevo 
+Enseguida se selecciona la carpeta publica, para Angular es: dist/nombreDelProyecto
+Por ultimo pregunta que ya hay un index.html que si se quiere reescribir: node_modules
+
+Para hacer el deploy con: > firebase deploy
+
+lo Primero es construir la aplicacion para produccion con el comando:
+    > ng build --prod
+esto genera una carpeta con el nombre del proyeco dentro de la carpeta dist 
+enseguida se realiza el deploy con 
+    > firebase deploy
+
+si al abrir la url del proyecto generada no se realiza el deploy del proyecto revisar el archivo firebase.json 
+fijarse en la carpeta public: dist/carpetaDelProyecto
+

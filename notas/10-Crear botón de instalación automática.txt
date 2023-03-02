@@ -1,0 +1,33 @@
+Crear botón de instalación automática
+
+Esta logica se agrega en el componente donde se quiere implementar el boton de instalacion
+HostListener: se importa de @angular/core es un decorador 
+
+  installEvent:any=null;
+
+  @HostListener('window: beforeinstallprompt', ['$event'])
+  onBeforeInstallPrompt(event:Event){
+    console.log(event);
+    event.preventDefault();
+    this.installEvent = event;
+  }
+
+  installByUser(){
+    if(this.installEvent){
+      this.installEvent.prompt();
+      this.installEvent.userChoice
+      .then((rta: any)=>{
+        if (rta.outcome === 'accepted') {
+          console.log('User accepted the A2HS prompt');
+        } else {
+          console.log('User dismissed the A2HS prompt');
+        }
+      });
+    }
+  }
+
+En el componente Nav crear un boton el cual al hacer click ejecute la funcion installByUser()
+
+ngIf valida que el evento de installEvent no sea nulo para saber si la aplicacion ya ha sido instalada 
+
+  <button (click)="installByUser()" *ngIf="installEvent">instalar App</button> 

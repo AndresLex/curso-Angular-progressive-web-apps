@@ -1,0 +1,11 @@
+Para configurar cosas como el icono el nombre de la aplicacion se encuentran en el archivo manifest.webmanifest
+
+"name": nombre largo de la aplicacion que aparecera en la landing page 
+"short_name": Es el nombre que aparecera en el home sprint de la aplicacion 
+"theme_color": Es el color de la barra 
+"background_color": "#3f51b5",
+"display": "standalone" Permite que se comparta la pantalla y deje el statusbar "donde va la hora, estado de bateria, etc" 
+            "fulscreen" Permite ocupar toda la pantalla del celular 
+"scope": "/",
+"start_url": desde que url ingresara nuestra aplicacion "/": significa que inicia desde el home de la aplicacion 
+"icons": 

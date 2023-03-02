@@ -1,0 +1,31 @@
+Caché de requests
+
+Para realizar cache de los parametros que no son estaticos como los assets sino dinamicos, es decir que vienen de un servidor externo
+
+assetsGroups : para archivos estaticos
+dataGroups : para requests a servidores
+
+
+maxSize : número de intentos de consulta en caché antes de hacer un nuevo request.
+maxAge: “5m”, => d-days - h-hour - m-min - s -sec - u-msec
+Strategy:
+    perfomance: saca del caché la información primero, si no hay consulta internet
+    freshness: primero va a internet, si es una red lenta va a caché.
+
+
+"dataGroups": [
+    {
+        // se le asigna un nombre al grupo 
+      "name": "api",
+        // Aqui se colocan las urls de los servidores a los cuales se esta conectando 
+      "urls": ["https://platzi-store.herokuapp.com/**"],
+        // Aqui va la configuracion y como va funcionar el cache para dichas urls
+      "cacheConfig": {
+        "maxSize": 3,
+        // Cuanto va durar o vivir el cache 
+        "maxAge": "5m",
+        "strategy": "performance",
+        "timeout": "3s"
+      }
+    }
+  ]

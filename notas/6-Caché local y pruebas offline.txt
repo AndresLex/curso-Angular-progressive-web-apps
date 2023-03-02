@@ -1,0 +1,33 @@
+Caché local y pruebas offline
+
+Ya que firebase funciona solo para Aplicaciones Web que son sitios estaticos, espera que cada pagina html sea estructurada desde cero 
+Ya que Angular genera una Single Page application 
+
+Este bug se soluciona agregando al archivo firebase.json la siguiente configuracion:
+
+{
+  "hosting": {
+    "public": "dist/platzi-store-pwa",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+
+    // Se agrega la siguiente configuracion, con rewrites quiere decir, cuando no se encuentre un sitio archivos html sino una Aplicacion Web Progresiva echa en Angular 
+    // "**": es cuando no encuentre ninguna direccion lo redirecciona al destination: "/index.html" 
+
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
+
+y enseguida se genera nuevamente el deploy con:
+
+    > firebase deploy 
+    
+

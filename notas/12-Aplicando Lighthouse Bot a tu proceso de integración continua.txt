@@ -1,0 +1,12 @@
+Aplicando Lighthouse Bot a tu proceso de integración continua
+
+1 - npm install -g lighthouse
+2 - lighthouse <URL>
+
+Lo ideal es incluirlo en un proceso de integración continua
+para que sea un script que se corra automático
+
+
+
+un buen articulo de Lighthouse:
+https://pwaexperts.io/blog/que-es-lighthouse-google-como-realizar-test-pwa

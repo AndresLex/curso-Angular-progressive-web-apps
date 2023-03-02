@@ -45,15 +45,18 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": true,
+              "development": {
+                "buildOptimizer": false,
+                "optimization": false,
+                "vendorChunk": true,
+                "extractLicenses": false,
+                "sourceMap": true,
+                "namedChunks": true
+              }
+              ,
               "outputHashing": "all",
-              "sourceMap": false,
               "extractCss": true,
-              "namedChunks": false,
               "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -79,6 +82,9 @@
           "configurations": {
             "production": {
               "browserTarget": "platzi-store-pwa:build:production"
+            },
+            "development": {
+              "browserTarget": "platzi-store-pwa:build:development"
             }
           }
         },

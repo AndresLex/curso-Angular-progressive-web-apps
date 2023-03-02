@@ -1,0 +1,9 @@
+Caché de assets
+
+El codigo y contenido requerido necesarios para la aplicación sea cacheados y actualizado cuando hay una nueva version disponible, asegurarse que las actualizaciones son aplicadas consistentemente cuando esta disponible, usando la configuracion de la sección assetsGroups, del archivo de configuracion.
+
+Para la instalacion(installMode) y actualizacion(updateMode) de la cache puedes elegir estas dos opciones
+
+prefetch: Precargas los archivos de una vez, desventaja consume ancho de banda desde el principio, esto es recomendado para archivos del primer grupo que conforma la aplicacion, ( js css), ya que cada vez que compilamos la compilacion de webpack generar un id unico en los archivos, asi detecta que debe descargarlos.
+
+lazy: a modo que detecta que lo solicita el usuario, va guardandolos en cache, esto es recomendado para los assets que no tienen hash, como imagenes, se debe utilizar la técnica lazy, que permite que se haga cache cuando detecte que lo solicita el usuario.

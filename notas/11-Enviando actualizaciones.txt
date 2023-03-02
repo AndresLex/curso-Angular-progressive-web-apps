@@ -1,0 +1,34 @@
+Enviando actualizaciones
+
+Para enviar actualizaciones automaticamente 
+lo primero a implementar es en el app.component
+
+importar de @angular/service-worker a SwUpdate 
+
+    import {SwUpdate} from '@angular/service-worker';
+
+SwUpdate al ser una clase funciona con el patron de inyeccion de dependencias
+esto se realiza en el constructor
+
+    constructor(
+        private swUpdate: SwUpdate
+    ) {}
+
+enseguida se crea un metodo updatePWA() 
+
+    updatePWA() {
+        this.swUpdate.available
+        .subscribe(value => {
+            console.log('update', value);
+            window.location.reload();
+        })
+    }
+
+Ahora se implementa el metodo ngOnInit() 
+para que cuando el componente se inicialice el metodo este pendiente de la subscribcion a una nueva version
+
+ngOnInit() {
+    this.updatePWA();
+}
+
+Con esto ya se pueden enviar las actualizaciones automaticamente sin necesidad de limpiar el cache 
